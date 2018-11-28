@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+.top-wrapper {
+  width: 100%;
+  margin: 32rpx 0 250rpx;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 90rpx;
+}
+.top-wrapper image {
+  width: 160rpx;
+  height: 160rpx;
+}
+.bottom-wrapper {
+  padding: 0 80rpx;
+  box-sizing: border-box;
+  position:absolute;
+  top:400rpx;
+  width: 100%;
+}
+.bottom-item-title {
+  color:#676A70;
+  font-size:24rpx;
+}
+
+.room-input {
+  background:rgba(55,61,68,0.65);
+  border-radius:58rpx;
+  text-align:center;
+  width:100%;
+  height:100rpx;
+  padding:28rpx auto;
+  font-size:32rpx;
+  color:#fff;
+  letter-spacing:2rpx;
+  margin-bottom: 34rpx;
+}
+.role-picker {
+  width:100%;
+  height:100rpx;
+  border-radius:50rpx;
+  box-sizing:border-box;
+  background:rgba(55,61,68,0.65);
+  color:#fff;
+  font-size:32rpx;
+  text-align:center;
+  padding:28rpx auto;
+  overflow: hidden;
+  position:relative;
+}
+.join {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.button-wrapper {
+  width: 100%;
+  padding: 0 80rpx;
+  position: absolute;
+  bottom: 120rpx;
+  box-sizing: border-box;
+}
+.join-button {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 58rpx;
+  color: #fff;
+  font-size: 40rpx;
+  text-align: center;
+  background: #2A6BF1;
+}
+button[disabled]:not([type]) {
+  background:#1B49A8;
+}

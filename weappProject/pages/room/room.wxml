@@ -1,0 +1,31 @@
+<view class='container'>
+  <view class='video-wrapper'>
+    <block wx:for="{{userlist}}" wx:for-item="user" wx:for-index="index" wx:key="*this">
+      <yunxin-pusher
+        wx:if="{{user.uid == channelInfo.uid && role != 'audience'}}"
+        id="yunxin-pusher"
+        url="{{user.url}}"
+        enable-camera="{{enableCamera}}"
+        muted="{{muted}}"
+        beauty="{{beauty ? 1 : 0}}"
+        whiteness="{{beauty ? 1 : 0}}"
+        config="{{user.config}}"
+        bindpushfailed="onPusherFailed"
+      ></yunxin-pusher>
+      <yunxin-player
+        wx:if="{{user.uid != channelInfo.uid}}"
+        id="yunxinplayer-{{user.uid}}"
+        uid="{{user.uid}}"
+        url="{{user.url}}"
+        config="{{user.config}}"
+        ></yunxin-player>
+    </block>
+  </view>
+  <view class='control-wrapper'>
+    <image class="{{role === 'audience' ? 'item disabled' : 'item'}}" src="/images/netcall-revert-camera.png" catchtap="switchCameraHandler"></image>
+    <image class="{{role === 'audience' ? 'item disabled' : 'item'}}" src="/images/netcall-camera{{enableCamera ? '' : '-close'}}.png" data-mode="1" catchtap="switchMeetingModeHandler"></image>
+    <image class="{{role === 'audience' ? 'item disabled' : 'item'}}" src="/images/netcall-micro{{muted ? '-close' : ''}}.png" data-mode="2" catchtap="switchMeetingModeHandler"></image>
+    <image class="{{role === 'audience' ? 'item disabled' : 'item'}}" src="/images/netcall-beauty{{beauty ? '' : '-close'}}.png" catchtap="beautifyHandler"></image>
+    <image class="item" src="/images/netcall-reject.png" catchtap="hangupHandler"></image>
+  </view>
+</view>

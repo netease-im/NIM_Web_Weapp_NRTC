@@ -1,0 +1,14 @@
+/* 公共样式 */
+page {
+  height: 100%;
+}
+.inline {
+  display:flex;
+  align-items:center;
+}
+.inline-border {
+  border:1px solid black;
+  width:100%;
+  padding:0 10rpx;
+  box-sizing:border-box;
+}

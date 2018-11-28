@@ -1,0 +1,12 @@
+<image src='../../images/background.png' class='container'>
+  <view class='top-wrapper'>
+    <image src='/images/logo.png'></image>
+  </view>
+  <view class='bottom-wrapper'>
+    <text class='bottom-item-title'>房间名：</text>
+      <input bindinput="roomInputHandler" class='room-input' maxlength='16' type='text' placeholder='请输入房间名'></input>
+  </view>
+  <view class='button-wrapper'>
+    <button class='join-button' loading="{{isJoining}}" disabled='{{isJoining || channelName.length == 0}}' open-type="getUserInfo" bindgetuserinfo="joinHandler">加入</button>
+  </view>
+</image>
