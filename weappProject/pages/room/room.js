@@ -1,4 +1,4 @@
-import Netcall from '../../sdk/NIM_Web_Netcall_weixin_v5.9.0.js'
+import Netcall from '../../sdk/NIM_Web_Netcall_weixin_v5.8.0.js'
 
 import { calculatePosition } from '../../utils/util.js'
 
