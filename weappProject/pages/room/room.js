@@ -36,7 +36,7 @@ Page({
     netcall.destroy()
     netcall.joinChannel({
       channelName: app.globalData.imInfo.channelName,
-      scene: '2', // 1:双人、2:多人
+      scene: 1, // 0:双人、1:多人
       accid: app.globalData.imInfo.accid,
       mode: 0,
       role: app.globalData.imInfo.role
